@@ -411,9 +411,10 @@
       inset: 0;
       /* top:0; right:0; bottom:0; left:0 */
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: rgba(19, 19, 19, 0.98);
+      background: black;
       z-index: 10000;
       color: white;
       font-family: 'Cinzel', serif;
@@ -430,7 +431,8 @@
       max-height: 60vh;
       object-fit: contain;
       display: block;
-      margin: 0.5rem auto;
+      margin-top: 2rem;
+      flex-shrink: 0;
     }
 
     #audio-screen>button#enable-audio {
@@ -442,11 +444,12 @@
       cursor: pointer;
       border-radius: 12px;
       color: #131313;
-      margin-top: 1rem;
+      margin-bottom: 2rem;
       transition: transform 0.12s ease, box-shadow 0.12s ease;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
       max-width: 90vw;
       width: fit-content;
+      flex-shrink: 0;
     }
 
     /* Smaller devices tweaks */
@@ -454,12 +457,14 @@
       #audio-screen>img#owl-gif {
         width: min(320px, 80vw);
         max-height: 50vh;
+        margin-top: 1rem;
       }
 
       #audio-screen>button#enable-audio {
         font-size: 0.95rem;
         padding: 0.75rem 1.2rem;
         border-radius: 10px;
+        margin-bottom: 1.5rem;
       }
     }
   </style>
