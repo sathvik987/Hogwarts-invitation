@@ -1,0 +1,13 @@
+# Netlify configuration for Hogwarts-invitation
+# This site is a static site with `index.html` at the repository root.
+[build]
+  # publish directory — set to repository root where index.html lives
+  publish = "."
+  # no build command required for this static site
+  command = ""
+
+# Optional: enable SPA fallback (uncomment if you want all routes to serve index.html)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
