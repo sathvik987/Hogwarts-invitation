@@ -6,17 +6,17 @@
   <meta http-equiv="Content-Language" content="en">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width">
-  <title>My Birthday</title>
+  <title>Avyukth's Birthday</title>
   <link rel="icon" href="images/icon.png" type="image/x-icon">
   <!-- SEO -->
   <meta name="description"
-    content="Special invitation to the magical world of Hogwarts. Join me in celebrating my birthday with a night full of magic, friends, and fun.">
+    content="Special invitation to the magical world of Hogwarts. Join us in celebrating Avyukth's birthday with a night full of magic, friends, and fun.">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="My Birthday" />
+  <meta property="og:title" content="Avyukth's Birthday" />
   <meta property="og:description"
-    content="Special invitation to the magical world of Hogwarts. Join me in celebrating my birthday with a night full of magic, friends, and fun." />
+    content="Special invitation to the magical world of Hogwarts. Join us in celebrating Avyukth's birthday with a night full of magic, friends, and fun." />
   <meta property="og:locale" content="en_US" />
-  <title>My Birthday </title>
+  <title>Avyukth's Birthday</title>
 
   <link rel="icon" href="images/icon.png" type="image/x-icon">
 
@@ -35,6 +35,18 @@
     html,
     body {
       background-color: #131313 !important;
+    }
+
+    :root {
+      --font-heading: 'HarryP', sans-serif;
+      --font-body: 'Cinzel', serif;
+      --text-gold: #f7b706;
+      --text-light: #ffffff;
+      --stroke-light: #6a6a6a;
+      --stroke-gold: #f7b706;
+      --shadow-soft: 1px 1px 2px rgba(26, 26, 25, 0.6);
+      --shadow-strong: 1px 1px 7px #303030;
+      --body-shadow: 1px 1px 0 #1f1f1d;
     }
 
     @font-face {
@@ -76,13 +88,14 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       width: 100%;
       margin: 0;
       padding-bottom: 0 !important;
-      padding-left: 2rem;
+      padding-left: 0;
       position: relative;
       z-index: 2 !important;
+      text-align: center;
     }
 
     .container-banner-center {
@@ -97,25 +110,48 @@
       z-index: 2 !important;
     }
 
-    .title {
-      font-family: 'HarryP', sans-serif;
-      font-size: 8.4rem;
-      color: #f7b706;
+    /* Unified heading style (HarryP) */
+    .title,
+    .title2,
+    .title3 {
+      font-family: var(--font-heading);
+      line-height: 1.05;
+      letter-spacing: 0.3px;
       position: relative;
       text-align: center;
-      -webkit-text-stroke: 0.1px #f7b706;
-      text-shadow: 1px 1px 7px #303030;
+      -webkit-text-stroke: 0.1px var(--stroke-light);
+      text-shadow: var(--shadow-soft);
+    }
+
+    .title {
+      font-size: clamp(3rem, 9vw, 8rem);
+      color: var(--text-gold);
+      -webkit-text-stroke: 0.1px var(--stroke-gold);
+      text-shadow: var(--shadow-strong);
     }
 
     .img-logo {
       width: 330px;
     }
 
-    .subtitle {
-      font-family: 'Cinzel', serif;
-      color: #ffffff;
-      font-size: 2rem;
-      text-shadow: 1px 1px 0 #1f1f1d;
+    /* Unified body text/subtitles */
+    .subtitle,
+    .subtitle2,
+    .subtitle3,
+    .text-select,
+    .text-dress {
+      font-family: var(--font-body);
+      color: var(--text-light);
+      line-height: 1.3;
+      letter-spacing: 0.2px;
+      text-shadow: var(--body-shadow);
+      text-align: center;
+    }
+
+    .subtitle,
+    .subtitle2,
+    .text-select {
+      font-size: clamp(1rem, 2.4vw, 1.6rem);
     }
 
     .btn-abajo {
@@ -155,20 +191,12 @@
       background-image: url('images/banner3.webp');
     }
 
-    .subtitle2 {
-      font-family: 'Cinzel', serif;
-      color: #ffffff;
-      font-size: 2rem;
-      text-shadow: 1px 1px 0 #1f1f1d;
-    }
+    /* .subtitle2 unified above */
 
 
     .title2 {
-      font-family: 'HarryP', sans-serif;
-      font-size: 7rem !important;
-      color: #ffffff;
-      -webkit-text-stroke: 0.1px #6a6a6a;
-      text-shadow: 1px 1px 2px rgba(26, 26, 25, 0.6);
+      font-size: clamp(2.5rem, 7.5vw, 6.5rem);
+      color: var(--text-light);
       margin-top: 1.5rem;
     }
 
@@ -177,10 +205,7 @@
     }
 
     .subtitle3 {
-      font-family: 'Cinzel', serif;
-      color: #ffffff;
-      font-size: 2.5rem;
-      text-shadow: 1px 1px 0 #1f1f1d;
+      font-size: clamp(1.25rem, 3vw, 2.2rem);
     }
 
     .banner4 {
@@ -220,10 +245,7 @@
     }
 
     .text-dress {
-      font-family: 'Cinzel', serif;
-      color: #ffffff;
-      font-size: 2.5rem;
-      text-shadow: 1px 1px 0 #1f1f1d;
+      font-size: clamp(1.25rem, 3vw, 2.2rem);
       text-align: center;
     }
 
@@ -232,11 +254,8 @@
     }
 
     .title3 {
-      font-family: 'HarryP', sans-serif;
-      font-size: 7rem !important;
-      color: #ffffff;
-      -webkit-text-stroke: 0.1px #6a6a6a;
-      text-shadow: 1px 1px 2px rgba(26, 26, 25, 0.6);
+      font-size: clamp(2.5rem, 7.5vw, 6.5rem);
+      color: var(--text-light);
     }
 
     .img-escudos {
@@ -275,14 +294,10 @@
         width: 100%;
       }
 
-      .title {
-        font-size: 3.5rem;
-        text-align: center;
-      }
-
+      /* Sizes handled by clamp(); keep alignment/padding only */
+      .title,
       .title2,
       .title3 {
-        font-size: 3.2rem !important;
         text-align: center;
       }
 
@@ -291,7 +306,6 @@
       .subtitle3,
       .text-select,
       .text-dress {
-        font-size: 1.2rem;
         text-align: center;
         padding: 0 1rem;
       }
@@ -545,7 +559,7 @@
     <div class="banner banner3">
       <div class="container">
         <div class="container-banner section-hidden">
-          <p class="subtitle3">Saturday, November 8th <br>5:00 PM to 8:00 PM</p>
+          <p class="subtitle3">Timings:<br> <br>Saturday, November 8th, 5:00 PM to 8:00 PM</p>
         </div>
       </div>
     </div>
@@ -567,9 +581,9 @@
     <div class="banner banner5">
       <div class="container">
         <div class="container-banner-center section-hidden">
-          <h3 class="text-dress"><span style="font-weight: 800;">Dress code:</span> <br><br>Related to the world of
+          <p class="subtitle3">Dress code:<br> <br>Related to the world of
             Harry
-            Potter</h3>
+            Potter</p>
         </div>
       </div>
     </div>
@@ -653,11 +667,16 @@
     <source src="media/harry-sound.mp3" type="audio/mpeg">
   </audio>
   <script>
-    document.getElementById("sound-btn").addEventListener("click", () => {
-      const audio = document.getElementById("bg-music");
-      audio.muted = false;
-      audio.play();
-    });
+    const soundBtnEl = document.getElementById("sound-btn");
+    if (soundBtnEl) {
+      soundBtnEl.addEventListener("click", () => {
+        const audio = document.getElementById("bg-music");
+        if (audio) {
+          audio.muted = false;
+          audio.play().catch(() => { });
+        }
+      });
+    }
   </script>
   <script>
     const audioScreen = document.getElementById("audio-screen");
